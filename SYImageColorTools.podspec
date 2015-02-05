@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'GPUImage' do |ss|
     ss.source_files = 'Classes/*.{h,m}', 'Classes/GPUImage/*.{h.m}'
-    ss.dependecy = 'GPUImage'
+    ss.dependency = 'GPUImage'
   end
 end
 
