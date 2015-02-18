@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
 
   s.subspec 'GPUImage' do |ss|
-    ss.source_files = 'Classes/*.{h,m}', 'Classes/GPUImage/*.{h.m}'
+    ss.source_files = 'Classes/GPUImage/*.{h.m}'
   end
 end
 
