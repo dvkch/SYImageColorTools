@@ -14,7 +14,7 @@
 @private
     const UInt8 *data;
     CFDataRef pixelData;
-    
+    CGDataProviderRef provider;
 }
 @property (nonatomic, assign) CGSize imageSize;
 @property (nonatomic, assign) SYImageInfo imageInfo;
@@ -33,10 +33,9 @@
         self.imageInfo = image.imageInfo;
         self.imageSize = image.size;
         
-        CGDataProviderRef provider = CGImageGetDataProvider(image.CGImage);
-        self->pixelData = CGDataProviderCopyData(provider);
+        self->provider = CGImageGetDataProvider(image.CGImage);
+        self->pixelData = CGDataProviderCopyData(self->provider);
         self->data = CFDataGetBytePtr(self->pixelData);
-#warning dealloc provider
     }
     return self;
 }
@@ -80,6 +79,8 @@
 {
     if(self->pixelData)
         CFRelease(self->pixelData);
+    if(self->provider)
+        CFRelease(self->provider);
 }
 
 @end
