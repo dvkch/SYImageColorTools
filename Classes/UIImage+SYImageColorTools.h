@@ -1,8 +1,8 @@
 //
 //  UIImage+SYImageColorTools.h
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 04/02/15.
+//  Created by Stanislas Chevallier on 04/02/15.
 //  Copyright (c) 2015 Syan. All rights reserved.
 //
 
@@ -11,8 +11,8 @@
 
 @interface UIImage (SYImageColorTools)
 
-- (SYImageInfo)imageInfo;
-- (UIColor *)colorAtPoint:(CGPoint)pixelPoint;
-- (UIImage *)imageByTrimmingTransparentPixels;
+- (SYImageInfo)sy_imageInfo;
+- (UIColor *)sy_colorAtPoint:(CGPoint)pixelPoint;
+- (UIImage *)sy_imageByTrimmingTransparentPixels;
 
 @end

@@ -1,8 +1,8 @@
 //
 //  GPUImageFramebuffer+SYImageColorTools.m
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 03/02/15.
+//  Created by Stanislas Chevallier on 03/02/15.
 //  Copyright (c) 2015 Syan. All rights reserved.
 //
 
@@ -25,7 +25,7 @@ void dataProviderUnlockCallback (void *info, const void *data, size_t size);
 
 @implementation GPUImageFramebuffer (SYImageColorTools)
 
-- (void)getBytes:(SYImageBytesBlock)block
+- (void)sy_getBytes:(SYImageBytesBlock)block
 {
     runSynchronouslyOnVideoProcessingQueue(^{
         [GPUImageContext useImageProcessingContext];

@@ -1,8 +1,8 @@
 //
 //  SYImageColorGetter.h
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 22/12/14.
+//  Created by Stanislas Chevallier on 22/12/14.
 //  Copyright (c) 2014 Syan. All rights reserved.
 //
 

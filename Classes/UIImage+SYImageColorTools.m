@@ -1,8 +1,8 @@
 //
 //  UIImage+SYImageColorTools.m
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 04/02/15.
+//  Created by Stanislas Chevallier on 04/02/15.
 //  Copyright (c) 2015 Syan. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 @implementation UIImage (SYImageColorTools)
 
-- (SYImageInfo)imageInfo
+- (SYImageInfo)sy_imageInfo
 {
     CGImageRef cgImage = self.CGImage;
     
@@ -32,7 +32,7 @@
     return info;
 }
 
-- (UIColor *)colorAtPoint:(CGPoint)pixelPoint
+- (UIColor *)sy_colorAtPoint:(CGPoint)pixelPoint
 {
     if (pixelPoint.x > self.size.width || pixelPoint.y > self.size.height)
         return nil;
@@ -41,7 +41,7 @@
     CFDataRef pixelData = CGDataProviderCopyData(provider);
     const UInt8* data = CFDataGetBytePtr(pixelData);
     
-    UIColor *color = [UIColor colorWithSYPixel:SYImageGetPixelValue(data, self.imageInfo, (NSUInteger)pixelPoint.x, (NSUInteger)pixelPoint.y, NO)];
+    UIColor *color = [UIColor sy_colorWithSYPixel:SYImageGetPixelValue(data, self.sy_imageInfo, (NSUInteger)pixelPoint.x, (NSUInteger)pixelPoint.y, NO)];
     
     CFRelease(pixelData);
     //CGDataProviderRelease(provider);
@@ -51,9 +51,9 @@
 
 
 // https://gist.github.com/spinogrizz/3549921
-- (UIImage *)imageByTrimmingTransparentPixels
+- (UIImage *)sy_imageByTrimmingTransparentPixels
 {
-    SYImageInfo imageInfo = self.imageInfo;
+    SYImageInfo imageInfo = self.sy_imageInfo;
     
     if (imageInfo.width < 2 || imageInfo.height < 2)
         return self;

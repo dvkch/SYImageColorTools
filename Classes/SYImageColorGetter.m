@@ -1,8 +1,8 @@
 //
 //  SYImageColorGetter.m
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 22/12/14.
+//  Created by Stanislas Chevallier on 22/12/14.
 //  Copyright (c) 2014 Syan. All rights reserved.
 //
 
@@ -30,7 +30,7 @@
     self = [super init];
     if (self)
     {
-        self.imageInfo = image.imageInfo;
+        self.imageInfo = image.sy_imageInfo;
         self.imageSize = image.size;
         
         self->provider = CGImageGetDataProvider(image.CGImage);

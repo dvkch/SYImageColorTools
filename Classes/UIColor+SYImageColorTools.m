@@ -1,8 +1,8 @@
 //
 //  UIColor+SYImageColorTools.m
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 04/02/15.
+//  Created by Stanislas Chevallier on 04/02/15.
 //  Copyright (c) 2015 Syan. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @implementation UIColor (SYImageColorTools)
 
-+ (UIColor *)colorWithSYPixel:(SYPixel)pixel
++ (UIColor *)sy_colorWithSYPixel:(SYPixel)pixel
 {
     return [self colorWithRed:pixel.r green:pixel.g blue:pixel.b alpha:pixel.a];
 }

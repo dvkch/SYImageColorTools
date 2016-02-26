@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SYImageColorTools'
-  s.version  = '0.1.2'
+  s.version  = '0.1.3'
   s.license  = 'Custom'
   s.summary  = 'It s always a hassle to get pixel information of an UIImage. Let s remedy that'
   s.homepage = 'https://github.com/dvkch/SYImageColorTools'

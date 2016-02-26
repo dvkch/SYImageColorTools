@@ -1,8 +1,8 @@
 //
 //  GPUImageFramebuffer+SYImageColorTools.h
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 03/02/15.
+//  Created by Stanislas Chevallier on 03/02/15.
 //  Copyright (c) 2015 Syan. All rights reserved.
 //
 
@@ -13,6 +13,6 @@ typedef void(^SYImageBytesBlock)(GLubyte *bytes, SYImageInfo info);
 
 @interface GPUImageFramebuffer (SYImageColorTools)
 
-- (void)getBytes:(SYImageBytesBlock)block;
+- (void)sy_getBytes:(SYImageBytesBlock)block;
 
 @end

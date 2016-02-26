@@ -1,18 +1,16 @@
 //
 //  SYGPUImageFilterWhiteSpaceTrimmer.m
-//  TicTacDoh
+//  SYImageColorTools
 //
-//  Created by rominet on 30/12/14.
+//  Created by Stanislas Chevallier on 30/12/14.
 //  Copyright (c) 2014 Syan. All rights reserved.
 //
 
 #import "SYGPUImageFilterWhiteSpaceTrimmer.h"
-#import "UIImage+Syan.h"
 #import "GPUImageFramebuffer+SYImageColorTools.h"
-#import "SYTools.h"
 #import "UIImage+SYImageColorTools.h"
-#import "SYImageColorTools.h"
 #import "UIColor+SYImageColorTools.h"
+#import "SYImageColorTools.h"
 
 @implementation SYGPUImageFilterWhiteSpaceTrimmer
 
